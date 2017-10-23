@@ -23,7 +23,7 @@
             <td> <input readonly="readonly"  [value]="c.firstName" style="color:black;"/></td>
             <td><input readonly="readonly"  [value]="c.lastName" style="color:black;"/></td>
             <td>
-              <button style="width:100px; height:30px;" type="button" class="btn btn-primary btn-sm" (click)="edit(c['id'])">Show</button>
+              <button style="width:100px; height:30px;" type="button" class="btn btn-primary btn-sm" (click)="show(c['id'])">Show</button>
               <button style="width:100px; height:30px;" type="button" class="btn btn-warning btn-sm" (click)="edit(c['id'])">Edit</button>
               <button style="width:100px; height:30px;" type="button" class="btn btn-danger btn-sm" (click)="destroy(c['id'])">Destroy</button>
             </td>

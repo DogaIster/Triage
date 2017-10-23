@@ -1,0 +1,69 @@
+<p>
+  edit works!
+</p>
+
+
+<div class="container">
+  <form (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label class="col-xs-4 control-label" for="">Patient ID: </label>
+      <div class="col-xs-8">
+        <input type="text" style="width: 300px" class="form-control" required
+               [(ngModel)]="patient.patientID" name="patienID">
+      </div>
+    </div>
+
+    <div class="form-group">
+
+      <label class="col-xs-4 control-label" for="">MRN: </label>
+      <div class="col-xs-8">
+        <input type="text" style="width: 300px" class="form-control" required
+               [(ngModel)]="patient.mrn" name="patienMRN">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-xs-4 control-label" for="">Patient's First Name: </label>
+      <div class="col-xs-8">
+        <input type="text" style="width: 300px" class="form-control" required
+               [(ngModel)]="patient.firstName" name="patienFirstName">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-xs-4 control-label" for="">Patient's Middle Name: </label>
+      <div class="col-xs-8">
+        <input type="text" style="width: 300px" class="form-control" required
+               [(ngModel)]="patient.middleName" name="patientMiddleName">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-xs-4 control-label" for="">Patient's Last Name: </label>
+      <div class="col-xs-8">
+        <input type="text" style="width: 300px" class="form-control" required
+               [(ngModel)]="patient.lastName" name="patienLastName">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-xs-4 control-label" for="">Patient's Weight: </label>
+      <div class="col-xs-8">
+        <input type="text" style="width: 300px" class="form-control" required
+               [(ngModel)]="patient.weight" name="patienWeight">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-xs-4 control-label" for="">Patient's Height: </label>
+      <div class="col-xs-8">
+        <input type="text" style="width: 300px" class="form-control" required
+               [(ngModel)]="patient.height" name="patienHeight">
+      </div>
+    </div>
+
+  </form>
+  <button class="btn btn-success" type="submit" (click)="onSubmit()" routerLink="/patients">Update Patient</button>
+  <button class="btn btn-danger" routerLink="/patients">Cancel</button>
+</div>

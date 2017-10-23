@@ -43,7 +43,19 @@ export class PatientListComponent implements OnInit {
   }
   public edit(id:string){
     console.log("update : " + id );
-    this.router.navigateByUrl('/patients/add/' + id);
+    this.router.navigateByUrl('/patients/edit/' + id);
     window.location.reload();
   }
+
+/*  public show(id:string){
+    console.log("show : " + id);
+    this.router.navigateByUrl('/patients/show/' + id);
+    window.location.reload();
+  }
+  */
+
+  public show(id:string){
+      this.router.navigateByUrl('/patients/show/' + id);
+    }
+
 }

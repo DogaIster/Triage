@@ -1,0 +1,44 @@
+<p>
+  show works!
+</p>
+
+
+<div class="panel panel-default" style="margin-top:10px;">
+  <button type="button" class="btn btn-success pull-right" routerLink="/patients/">Patients List</button>
+
+  <div class="panel-heading">
+    <b>Patients Details</b>
+  </div>
+
+  <div class="panel-body" style="position:relative">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+        <tr>
+          <th>MRN</th>
+          <th>First Name</th>
+          <th>Middle Name</th>
+          <th>Last Name</th>
+          <th>Weight</th>
+          <th>Height</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        <tr *ngFor="let c of columns">
+          <td><input readonly="readonly" [value]="c.mrn" style="color:black;"/> </td>
+          <td> <input readonly="readonly"  [value]="c.firstName" style="color:black;"/></td>
+          <td> <input readonly="readonly"  [value]="c.middleName" style="color:black;"/></td>
+          <td><input readonly="readonly"  [value]="c.lastName" style="color:black;"/></td>
+          <td><input readonly="readonly" [value]="c.weight" style="color:black;"/> </td>
+          <td><input readonly="readonly"  [value]="c.height" style="color:black;"/></td>
+        </tr>
+
+
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

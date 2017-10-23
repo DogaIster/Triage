@@ -10,6 +10,8 @@ import { EncourterAddComponent } from './encourter-add/encourter-add.component';
 import { PatientListComponent } from './patient-list/patient-list.component';
 import { EncourterListComponent } from './encourter-list/encourter-list.component';
 import {HttpClientModule} from "@angular/common/http";
+import { ShowComponent } from './show/show.component';
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import {HttpClientModule} from "@angular/common/http";
     EncourterAddComponent,
     PatientListComponent,
     EncourterListComponent,
+    ShowComponent,
+    EditComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +33,7 @@ import {HttpClientModule} from "@angular/common/http";
         redirectTo: 'patients',
         pathMatch: 'full',
       },
+
       {
         path: 'patients',
         component: PatientListComponent
@@ -52,6 +57,22 @@ import {HttpClientModule} from "@angular/common/http";
       {
         path: 'encourters/add/:id',
         component: EncourterAddComponent
+      },
+      {
+        path: 'patients/show',
+        component: ShowComponent
+      },
+      {
+        path:'patients/show/:id',
+        component: ShowComponent
+      },
+      {
+        path:'patients/edit',
+        component: EditComponent
+      },
+      {
+        path:'patients/edit/:id',
+        component: EditComponent
       }
     ]),
 
