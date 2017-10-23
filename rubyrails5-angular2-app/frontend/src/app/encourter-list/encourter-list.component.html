@@ -1,3 +1,45 @@
-<p>
-  encourter-list works!
-</p>
+<div class="panel panel-default" style="margin-top:10px;">
+  <div class="panel-heading">
+    <b>Encourters</b>
+  </div>
+  <div class="panel-body" style="position:relative">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Encourter ID</th>
+          <th>Visit Number</th>
+          <th>Admitted At</th>
+          <th>Discharged At</th>
+          <th>Location</th>
+          <th>Room</th>
+          <th>Bed</th>
+          <th>Patient ID</th>
+          <th>Actions</th>
+
+        </tr>
+        </thead>
+
+        <tbody>
+
+        <tr *ngFor="let c of columns">
+          <td> <input readonly="readonly"  [value]="c.encourterID" style="color:black;"/></td>
+          <td><input readonly="readonly"  [value]="c.visitNumber" style="color:black;"/></td>
+          <td><input readonly="readonly" [value]="c.admittedAt" style="color:black;"/> </td>
+          <td><input readonly="readonly" [value]="c.dischargedAt" style="color:black;"/> </td>
+          <td><input readonly="readonly" [value]="c.location" style="color:black;"/> </td>
+          <td><input readonly="readonly" [value]="c.room" style="color:black;"/> </td>
+          <td><input readonly="readonly" [value]="c.bed" style="color:black;"/> </td>
+          <td><input readonly="readonly" [value]="c.patientID" style="color:black;"/> </td>
+
+          <td>
+            <button style="width:100px; height:30px;" type="button" class="btn btn-primary btn-sm" (click)="edit(c['id'])">Show</button>
+            <button style="width:100px; height:30px;" type="button" class="btn btn-warning btn-sm" (click)="edit(c['id'])">Edit</button>
+            <button style="width:100px; height:30px;" type="button" class="btn btn-danger btn-sm" (click)="destroy(c['id'])">Destroy</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

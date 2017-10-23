@@ -1,3 +1,73 @@
-<p>
-  encourter-add works!
-</p>
+<div class="container">
+  <form (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label class="col-xs-4 control-label" for="">Encourter ID: </label>
+      <div class="col-xs-8">
+        <input type="text" style="width: 300px" class="form-control" required
+               [(ngModel)]="encourter.encourterID" name="encourterID">
+      </div>
+    </div>
+
+    <div class="form-group">
+
+      <label class="col-xs-4 control-label" for="">Visit Number: </label>
+      <div class="col-xs-8">
+        <input type="text" style="width: 300px" class="form-control" required
+               [(ngModel)]="encourter.visitNumber" name="visitnumber">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-xs-4 control-label" for="">Admitted At: </label>
+      <div class="col-xs-8">
+        <input type="text" style="width: 300px" class="form-control" required
+               [(ngModel)]="encourter.admittedAt" name="admitteddate">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-xs-4 control-label" for="">Discharged At: </label>
+      <div class="col-xs-8">
+        <input type="text" style="width: 300px" class="form-control" required
+               [(ngModel)]="encourter.dischargedAt" name="dischargeddate">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-xs-4 control-label" for="">Location: </label>
+      <div class="col-xs-8">
+        <input type="text" style="width: 300px" class="form-control" required
+               [(ngModel)]="encourter.location" name="location">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-xs-4 control-label" for="">Room: </label>
+      <div class="col-xs-8">
+        <input type="text" style="width: 300px" class="form-control" required
+               [(ngModel)]="encourter.room" name="room">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-xs-4 control-label" for="">Bed: </label>
+      <div class="col-xs-8">
+        <input type="text" style="width: 300px" class="form-control" required
+               [(ngModel)]="encourter.bed" name="bed">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-xs-4 control-label" for="">Patient ID: </label>
+      <div class="col-xs-8">
+        <input type="text" style="width: 300px" class="form-control" required
+               [(ngModel)]="encourter.patientID" name="patientID">
+      </div>
+    </div>
+
+  </form>
+  <button class="btn btn-success" type="submit" (click)="onSubmit()" routerLink="/encourters">Create Encourter Record</button>
+  <button class="btn btn-danger" routerLink="/encourters">Cancel</button>
+</div>
+
