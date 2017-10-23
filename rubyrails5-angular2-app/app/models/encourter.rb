@@ -1,0 +1,2 @@
+class Encourter < ApplicationRecord
+end
