@@ -1,15 +1,17 @@
 <div class="panel panel-default" style="margin-top:10px;">
+  <button type="button" class="btn btn-success pull-right" routerLink="/patients/add">Add Patient</button>
   <div class="panel-heading">
     <b>Patients</b>
   </div>
+
   <div class="panel-body" style="position:relative">
     <div class="table-responsive">
       <table class="table">
         <thead>
         <tr>
+          <th>MRN</th>
           <th>First Name</th>
           <th>Last Name</th>
-          <th>MRN</th>
           <th>Actions</th>
         </tr>
         </thead>
@@ -17,9 +19,9 @@
         <tbody>
 
           <tr *ngFor="let c of columns">
+            <td><input readonly="readonly" [value]="c.mrn" style="color:black;"/> </td>
             <td> <input readonly="readonly"  [value]="c.firstName" style="color:black;"/></td>
             <td><input readonly="readonly"  [value]="c.lastName" style="color:black;"/></td>
-            <td><input readonly="readonly" [value]="c.mrn" style="color:black;"/> </td>
             <td>
               <button style="width:100px; height:30px;" type="button" class="btn btn-primary btn-sm" (click)="edit(c['id'])">Show</button>
               <button style="width:100px; height:30px;" type="button" class="btn btn-warning btn-sm" (click)="edit(c['id'])">Edit</button>

@@ -23,21 +23,22 @@ export class PatientListComponent implements OnInit {
 
 
   public destroy(id:string){
-    console.log("delete : " + id);
-    var path = 'patients/' + id;
-    this.apiService.delete(path).subscribe((r)=>{
+    if(confirm("Patient and  all of the patient's encounters will be deleted. Are you sure you want to delete this patient?")) {
 
-      this.columns = this.columns.filter((p,i)=>{
+      console.log("delete : " + id);
+      var path = 'patients/' + id;
+      this.apiService.delete(path).subscribe((r) => {
 
-        if(Number(id) === p.patientID )
-        {
-          return false;
-        }
-        return true;
-      },this.columns)
-      window.location.reload();
-    });
+        this.columns = this.columns.filter((p, i) => {
 
+          if (Number(id) === p.patientID) {
+            return false;
+          }
+          return true;
+        }, this.columns)
+        window.location.reload();
+      });
+    }
 
   }
   public edit(id:string){
