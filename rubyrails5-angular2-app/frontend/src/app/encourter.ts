@@ -1,4 +1,5 @@
 export class Encourter{
+  public id:number;
   public encourterID?: number;
   public visitNumber: string;
   public admittedAt: string;

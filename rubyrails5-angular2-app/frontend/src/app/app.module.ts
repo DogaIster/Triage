@@ -39,6 +39,10 @@ import { EditComponent } from './edit/edit.component';
         component: PatientListComponent
       },
       {
+        path: 'patients/:id',
+        component: ShowComponent
+      },
+      {
         path: 'encourters',
         component: EncourterListComponent
       },
