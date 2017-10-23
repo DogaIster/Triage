@@ -12,6 +12,7 @@ import { EncourterListComponent } from './encourter-list/encourter-list.componen
 import {HttpClientModule} from "@angular/common/http";
 import { ShowComponent } from './show/show.component';
 import { EditComponent } from './edit/edit.component';
+import { EditEncounterComponent } from './edit-encounter/edit-encounter.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { EditComponent } from './edit/edit.component';
     EncourterListComponent,
     ShowComponent,
     EditComponent,
+    EditEncounterComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,10 +39,6 @@ import { EditComponent } from './edit/edit.component';
       {
         path: 'patients',
         component: PatientListComponent
-      },
-      {
-        path: 'patients/:id',
-        component: ShowComponent
       },
       {
         path: 'encourters',
@@ -77,6 +75,14 @@ import { EditComponent } from './edit/edit.component';
       {
         path:'patients/edit/:id',
         component: EditComponent
+      },
+      {
+        path:'encourters/edit',
+        component: EditEncounterComponent
+      },
+      {
+        path:'encourters/edit/:id',
+        component: EditEncounterComponent
       }
     ]),
 

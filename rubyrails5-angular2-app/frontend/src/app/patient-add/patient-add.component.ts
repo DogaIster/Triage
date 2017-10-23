@@ -31,14 +31,7 @@ export class PatientAddComponent implements OnInit {
   }
 
   public onSubmit(){
-    console.log("Adding a product: " + this.patient.firstName);
-   /* if(this.patient.patientID){
-      this.apiService.update("patients/"+this.patient.patientID,this.patient).subscribe((r)=>{
-        console.log(r);
-        alert("Patient updated !");
-      })
-    }*/
-
+    console.log("Adding a patient: " + this.patient.firstName);
       this.apiService.post("patients", this.patient).subscribe((r) => {
         console.log(r);
         this.patient = new Patient();

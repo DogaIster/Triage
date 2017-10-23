@@ -36,7 +36,7 @@ export class EditComponent implements OnInit {
     if(this.patient.id){
       this.apiService.update("patients/"+this.patient.id,this.patient).subscribe((r)=>{
         console.log(r);
-        alert("Product updated !");
+        alert("Patient information updated !");
       })
       window.location.reload();
     }}

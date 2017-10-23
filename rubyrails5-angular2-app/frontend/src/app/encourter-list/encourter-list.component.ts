@@ -42,7 +42,7 @@ export class EncourterListComponent implements OnInit {
   }
   public edit(id:string){
     console.log("update : " + id );
-    this.router.navigateByUrl('/encourters/add/' + id);
+    this.router.navigateByUrl('/encourters/edit/' + id);
     window.location.reload();
   }
 }
